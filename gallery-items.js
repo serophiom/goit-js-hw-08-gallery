@@ -1,4 +1,4 @@
-export default [
+const gallery = [
   {
     preview:
       'https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825__340.jpg',
@@ -63,3 +63,11 @@ export default [
     description: 'Lighthouse Coast Sea',
   },
 ];
+
+const galleryUlRef = document.querySelector('.js-gallery');
+console.log(galleryUlRef);
+
+gallery.map(image => {
+  galleryUlRef.insertAdjacentHTML('beforeend', `<li class="gallery__item"><a class= "gallery__link" href ="${image.original}"><img class="gallery__image" src="${image.preview}" data-source="${image.original}" alt="${image.description}"></a></li>`);
+  
+})
