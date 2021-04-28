@@ -18,16 +18,18 @@ btnCloseModal.addEventListener('click', onCloseModal);
 // const getOriginalImage = galleryUlRef.addEventListener('click', onTargetCkick);
 
 // function onTargetCkick () {
-//     const originalImage = gallery.querySelector('data-resource');
+//     const originalImage = gallery.querySelector('[data-resource]');
 //     console.log(originalImage);
 // }
 
 function onOpenModal (event) {
     const isGalleryItemRef = event.target.classList.contains('gallery__item');
     if (!isGalleryItemRef) {
+        console.log('AGA');
         return;
     }
   modalRef.classList.add('is-open');
+    
 }
 
 function onCloseModal () {
@@ -37,17 +39,19 @@ function onCloseModal () {
 function createGallery(gallery) {
 return gallery.map(({original, preview, description} = {}) => {
 return `<li class="gallery__item">
-<a class="gallery__link" href="${original}">
+
 <img class="gallery__image"
 src="${preview}"
 data-source="${original}"
 alt="image.description">
-</a>
+
 </li>`
 })
 .join('');
 };
 
+// <a class="gallery__link" href="${original}"></a>
+// </a>
 
 
 
