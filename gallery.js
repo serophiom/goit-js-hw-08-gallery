@@ -18,7 +18,11 @@ galleryUlRef.addEventListener('click', onOpenModal);
 
 btnCloseModal.addEventListener('click', onCloseModal);
 overlayRef.addEventListener('click', onCloseModal);
+window.addEventListener('keydown', onCloseModal);
 
+function closeModalEscape (event) {
+    
+}
 
 
 
