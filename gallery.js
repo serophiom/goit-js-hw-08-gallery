@@ -24,18 +24,9 @@ function closeModalEscape (event) {
     
 }
 
-
-
-// const getOriginalImage = galleryUlRef.addEventListener('click', onTargetCkick);
-
-// function onTargetCkick () {
-//     const originalImage = gallery.querySelector('[data-resource]');
-//     console.log(originalImage);
-// }
-
 function onOpenModal (event) {
     const isGalleryItemRef = event.target.classList.contains('gallery__image');
-    if (!isGalleryItemRef) {
+    if (!isGalleryItemRef || event.currentTarget === event.target) {
         console.log('AGA');
         return;
     }
@@ -43,7 +34,6 @@ function onOpenModal (event) {
   modalImageRef.src = event.target.dataset.source;
   modalImageRef.alt = event.target.alt;
   console.log(modalImageRef.src);
-//   modalImageRef.src = originalImageUrl;
 }
 
 function onCloseModal () {
