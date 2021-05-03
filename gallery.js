@@ -63,7 +63,7 @@ function onEscapeKeyPress (event) {
 }
 
 function createGallery(gallery) {
-    return gallery.map(({original, preview, description, index} = {}) => {
+    return gallery.map(({original, preview, description} = {}) => {
     imageArray.push(`${original}`);
 
     return `<li class="gallery__item">
