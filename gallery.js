@@ -71,7 +71,6 @@ function createGallery(gallery) {
     <img class="gallery__image"
     src="${preview}"
     data-source="${original}"
-    data-index="${index}"
     alt="${description}">
     </a>
     </li>`
